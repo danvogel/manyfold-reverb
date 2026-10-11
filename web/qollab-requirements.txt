@@ -1,0 +1,2 @@
+# NumPy is supplied by Pyodide. Hosted dependency loading needs verification.
+qiskit==2.5.2

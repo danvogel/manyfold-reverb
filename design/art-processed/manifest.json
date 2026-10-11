@@ -1,0 +1,65 @@
+{
+  "kitty-1": {
+    "source": "kitty-1.png",
+    "source_sha256": "56f133f1112b010804bcbbd57f478518f706aef1972b8a8f1a97a13198af6e29",
+    "width": 320,
+    "height": 344,
+    "bytes": 32828
+  },
+  "cat-1": {
+    "source": "cat-1.png",
+    "source_sha256": "1c27f8fb3ce6572b3bff7777485b18880ace8b76a91f17587b3d858797bb5693",
+    "width": 240,
+    "height": 306,
+    "bytes": 32196
+  },
+  "doodle": {
+    "source": "doodle.png",
+    "source_sha256": "c6a696c4803385c2acf54ec916043bca4e7c858f94ffc8e1d5cc46edb41a5712",
+    "width": 190,
+    "height": 205,
+    "bytes": 30956
+  },
+  "doodle-warm": {
+    "source": "doodle-warm.png",
+    "source_sha256": "b690632fd3a5484ac4d87c5849596ee65c7f9aade18825c6441146239aef87af",
+    "width": 220,
+    "height": 190,
+    "bytes": 30200
+  },
+  "doodle-winter": {
+    "source": "doodle-winter.png",
+    "source_sha256": "83647a83b56364122a513bc10cfe884ff764574910f1764c38db02ff9a0453b8",
+    "width": 230,
+    "height": 252,
+    "bytes": 32376
+  },
+  "circuit": {
+    "source": "manyfold-circuit-scan.pdf",
+    "source_sha256": "ff0370815f533cbbc4eccfdc1c72ce520520a8b3970df6e5bda7947e34cfa66b",
+    "width": 1151,
+    "height": 1600,
+    "bytes": 141814
+  },
+  "photo": {
+    "source": "PXL_20261011_080759493.jpg",
+    "source_sha256": "531edc3d0a4a8ab31c0f2b10186690cbb8c79bd97cafd7269a2d6f79d100a0b4",
+    "width": 387,
+    "height": 520,
+    "bytes": 16926
+  },
+  "paper": {
+    "source": "PXL_20261011_174711287.jpg",
+    "source_sha256": "9b3170356bb28f6dc3ddb774010b8bf566cdc715c7915dfb57cfcb8a20eb2c8f",
+    "width": 600,
+    "height": 414,
+    "bytes": 6092
+  },
+  "mapping": {
+    "source": "fig-mapping.jpg",
+    "source_sha256": "27345da9cb4b9e9049492a108f1a8969b75b9a390b55466787595c23c1c1ec81",
+    "width": 1000,
+    "height": 601,
+    "bytes": 31064
+  }
+}

@@ -1,0 +1,7 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Notebook responsive review harness</title>
+<style>body{margin:0;background:#fff;font:16px system-ui}nav{height:48px}iframe{display:block;border:0;margin:0}a{margin:8px;display:inline-block}</style>
+<nav>Review only: <a href="?width=1360">1360 px</a><a href="?width=420">420 px</a><a href="?width=420&fixture=16">16-room bridge fixture</a></nav><iframe title="Notebook under review"></iframe>
+<script>
+const p=new URLSearchParams(location.search),f=document.querySelector('iframe');f.width=p.get('width')==='420'?420:1360;f.src=p.get('fixture')==='16'?'fixture.html':'index.html';
+setInterval(()=>{if(f.contentDocument?.body)f.height=Math.max(900,f.contentDocument.body.scrollHeight);},300);
+</script></html>

@@ -1,0 +1,7 @@
+{
+  "cpp/core.hpp": "278c72f701ebdd515fb0b9215e07430d044896a581664601f3bb80f069a826eb",
+  "cpp/listening.hpp": "960dc3d958e82fee40722a6e99cc8e0b3ba11425b9a040abe8dadf5ebeded456",
+  "cpp/session.hpp": "2d7aa8ecc1e4f638c32e7a86e9c2fdb5a3d3b5a28aa38b69e2012a3d8a97a1af",
+  "cpp/wasm_api.cpp": "2a546dccc56a184bf5e4c68af03b01721fcc2aa61556bf2d3e4e8c622244322b",
+  "prebuilt/manyspace-core.js": "2831fc41e3f2839f5ad5737f6a8b6d012dec53164f9524cf6a50ed7e87b530a5"
+}

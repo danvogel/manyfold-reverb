@@ -1,0 +1,179 @@
+/* Shared styling for the Lab Notebook Play-page variants (03a, 03b, 03c).
+   Builds on sketch.css. Hand-drawn controls in place of browser widgets. */
+.nb{font-family:'Architects Daughter',cursive;color:#2a2622}
+.nb .hand,.nb label,.nb button,.nb select,.nb h2,.nb h3{font-family:'Architects Daughter',cursive}
+.nb h2{margin:0;font-size:28px;font-weight:400;line-height:1.1}
+.nb h3{margin:0;font-size:21px;font-weight:400}
+.nb .page{background:#fbf8ef;background-image:linear-gradient(#cfe0f0 1px,transparent 1px),linear-gradient(90deg,#cfe0f0 1px,transparent 1px);background-size:24px 24px;border:1px solid #b8b2a4;box-shadow:4px 6px 0 #b8b2a4;padding:36px 40px;position:relative}
+.nb .tabs{display:flex;gap:6px;margin-bottom:-1px;padding-left:24px}
+.nb .tab{font-family:'Architects Daughter',cursive;font-size:18px;padding:8px 18px;border:1px solid #b8b2a4;border-bottom:0;background:#efe9da;border-radius:10px 10px 0 0}
+.nb .tab.on{background:#fbf8ef;font-weight:700;border-color:#2a2622}
+.nb .tape{position:absolute;width:90px;height:22px;background:rgba(255,230,120,.75);transform:rotate(-4deg);top:-10px;left:30px}
+.nb .stamp{display:inline-block;border:3px solid #b03934;color:#b03934;font-family:'Permanent Marker',cursive;font-size:17px;padding:0 8px;transform:rotate(-8deg);letter-spacing:2px;opacity:.85}
+.nb .cell{border:1px solid #2a2622;background:#fff;color:#2a2622;border-radius:3px;font-family:'Architects Daughter',cursive;font-size:13px}
+.nb .map-paper{background:#fff;border:1px solid #2a2622;padding:12px;box-shadow:3px 3px 0 #b8b2a4;transform:rotate(.6deg);transition:opacity .3s}
+.nb.bypass .map-paper{opacity:.3}
+.nb .handbtn{font-family:'Architects Daughter',cursive;font-size:19px;white-space:nowrap;min-height:44px;padding:0 18px;border:2px solid #2a2622;border-radius:50% 45% 48% 52%/55% 50% 50% 45%;background:#fff;color:#2a2622}
+.nb .handbtn[aria-pressed=true]{background:#fff3b0;box-shadow:inset 1px 2px 0 #b8b2a4}
+.nb .handbtn:disabled{opacity:.4;cursor:default}
+.nb .icon{width:46px;height:46px;padding:0;border:2px solid #2a2622;border-radius:50% 45% 48% 52%/55% 50% 50% 45%;background:#fff;font-size:20px;display:inline-flex;align-items:center;justify-content:center;color:#2a2622}
+.nb .icon[aria-pressed=true]{background:#fff3b0;box-shadow:inset 1px 2px 0 #b8b2a4}
+.nb .transport{display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap}
+.nb .transport .k{display:flex;flex-direction:column;align-items:center;gap:2px;font-family:'Architects Daughter',cursive;font-size:15px}
+.nb select{font-family:'Architects Daughter',cursive;font-size:19px;border:0;border-bottom:2px solid #2a2622;background:transparent;padding:2px 4px;color:#2a2622}
+.nb input[type=number]{font-family:'Architects Daughter',cursive;font-size:19px;width:64px;border:0;border-bottom:2px solid #2a2622;background:transparent;text-align:right;padding:2px 4px;color:#2a2622}
+.nb input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:24px;background:transparent;margin:0;min-width:0}
+.nb input[type=range]::-webkit-slider-runnable-track{height:3px;background:#2a2622;border-radius:2px}
+.nb input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;margin-top:-10px;border-radius:50% 45% 50% 48%;background:#fff;border:2.5px solid #2a2622;box-shadow:1px 2px 0 #b8b2a4;cursor:pointer}
+.nb input[type=range]::-moz-range-track{height:3px;background:#2a2622}
+.nb input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:#fff;border:2.5px solid #2a2622;cursor:pointer}
+.nb .row{display:grid;grid-template-columns:96px minmax(0,1fr) auto;gap:12px;align-items:center;font-family:'Architects Daughter',cursive;font-size:19px}
+.nb .row .val{display:flex;align-items:baseline;gap:4px;white-space:nowrap}
+.nb .unit{font-size:16px;color:#6e685e;font-family:'Architects Daughter',cursive}
+.nb .seg{display:inline-flex;align-self:flex-start;border:2px solid #2a2622;border-radius:14px;overflow:hidden;background:#fff;position:relative}
+.nb .seg label{padding:6px 14px;cursor:pointer;font-size:18px;display:flex;gap:6px;align-items:center;border-right:2px solid #2a2622;margin:0}
+.nb .seg label:last-child{border-right:0}
+.nb .seg input{position:absolute;opacity:0;width:1px;height:1px}
+.nb .seg label:has(input:checked){background:#2a2622;color:#fbf8ef}
+.nb .seg label:has(input:focus-visible){outline:3px solid #ffb067;outline-offset:-3px}
+.nb .switch{display:inline-flex;align-items:center;gap:10px;font-size:19px;cursor:pointer;position:relative}
+.nb .switch input{position:absolute;opacity:0;width:1px;height:1px}
+.nb .switch .lever{width:52px;height:26px;border:2px solid #2a2622;border-radius:14px;background:#fff;position:relative;flex:none}
+.nb .switch .lever::after{content:"";position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;background:#2a2622;transition:left .15s}
+.nb .switch:has(input:checked) .lever{background:#dbe9ff}
+.nb .switch:has(input:checked) .lever::after{left:28px;background:#1f5fa8}
+.nb .switch:has(input:focus-visible) .lever{outline:3px solid #ffb067;outline-offset:2px}
+.nb .vu{position:relative;height:24px;border:2px solid #2a2622;border-radius:4px;background:#fff repeating-linear-gradient(90deg,transparent 0 calc(10% - 1px),#cfe0f0 calc(10% - 1px) 10%)}
+.nb .vu .fill{position:absolute;left:0;top:0;bottom:0;width:0;background:linear-gradient(90deg,#5c9a44,#e0b020 65%,#b03934)}
+.nb .vu .mark{position:absolute;top:-7px;bottom:-7px;width:3px;background:#b03934;transform:translateX(-50%)}
+.nb .vu .mark::after{content:"▼";position:absolute;top:-16px;left:50%;transform:translateX(-50%);color:#b03934;font-size:11px}
+.nb .logta{width:100%;min-height:140px;font-family:'Architects Daughter',cursive;font-size:17px;line-height:24px;background:#fff repeating-linear-gradient(transparent 0 23px,#cfe0f0 23px 24px);border:1px solid #2a2622;padding:0 8px;resize:vertical;box-sizing:border-box;color:#2a2622;display:block;margin-top:4px}
+.nb .skip{font-family:'Architects Daughter',cursive;font-size:16px;background:none;border:0;color:#1f5fa8;text-decoration:underline;padding:0;align-self:flex-start}
+.nb [data-step]{transition:opacity .35s,filter .35s}
+.nb [data-step].locked{opacity:.38;filter:grayscale(1)}
+.nb .tick{visibility:hidden;color:#1f5fa8;font-family:'Permanent Marker',cursive;font-size:26px;line-height:1}
+.nb [data-step].done .tick{visibility:visible}
+.nb .now{font-family:'Architects Daughter',cursive;font-size:18px;color:#6e685e}
+.nb .hint{font-family:'Architects Daughter',cursive;font-size:16px;color:#1f5fa8}
+.nb [hidden]{display:none!important}
+
+/* Shared layout for the 3b notebook spread (Cover, Generate, Shape, Play):
+   two facing pages with a stitched spine, a checklist, numbered steps, tracing paper. */
+.spread{display:grid;grid-template-columns:minmax(0,1fr) 34px minmax(0,1fr);align-items:stretch}
+.spine{background:linear-gradient(90deg,transparent 0 13px,#b8b2a4 13px 16px,#9a948a 16px 19px,transparent 19px);position:relative}
+.spine::after{content:"";position:absolute;top:30px;bottom:30px;left:12px;width:10px;background:repeating-linear-gradient(#2a2622 0 10px,transparent 10px 34px)}
+.nb .page.left{box-shadow:none;border-right:0;padding:32px 30px 36px 40px}
+.nb .page.right{box-shadow:4px 6px 0 #b8b2a4;border-left:0;padding:32px 40px 36px 30px}
+.nb .tabs a{text-decoration:none;color:inherit}
+.nb h1{margin:0;font-family:'Permanent Marker',cursive;font-size:36px;line-height:1;font-weight:400}
+.checklist{display:flex;flex-wrap:wrap;gap:4px 18px;margin:8px 0 18px;font-family:'Architects Daughter',cursive;font-size:19px}
+.checklist span{color:#6e685e}.checklist span.on{color:#1f5fa8}
+.steps{display:flex;flex-direction:column;gap:20px}
+.step{display:flex;flex-direction:column;gap:10px;padding:10px 12px 14px;border-left:3px solid transparent}
+.step.active{border-left-color:#1f5fa8;background:rgba(255,243,176,.35)}
+.step .head{display:flex;align-items:center;gap:12px}
+.step .num{width:34px;height:34px;border:2.5px solid #2a2622;border-radius:50% 46% 50% 48%;display:flex;align-items:center;justify-content:center;font-family:'Architects Daughter',cursive;font-size:21px;background:#fff;transform:rotate(-3deg);flex:none}
+.step.done .num{background:#dbe9ff;border-color:#1f5fa8}
+.step .tick{margin-left:auto}
+.page.right .step{padding-left:0;padding-right:0}
+.onion{position:absolute;inset:0;background:rgba(251,248,239,.86);display:flex;align-items:center;justify-content:center;text-align:center;padding:40px;font-family:'Architects Daughter',cursive;font-size:24px;color:#6e685e;transition:opacity .5s;z-index:2}
+.onion.off{opacity:0;pointer-events:none;visibility:hidden;transition:opacity .5s,visibility 0s .5s}
+.badge{display:inline-block;font-family:'Architects Daughter',cursive;font-size:17px;border:1.5px solid #2a2622;border-radius:12px;padding:2px 10px;background:#fff}
+.carry{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:#2a2622;background:#fff3b0;font-size:21px}
+@media(max-width:980px){.spread{grid-template-columns:1fr}.spine{display:none}.nb .page.left{border-right:1px solid #b8b2a4;box-shadow:4px 6px 0 #b8b2a4;margin-bottom:28px}.nb .page.right{border-left:1px solid #b8b2a4}}
+
+
+body{margin:0;font-family:'Source Serif 4',Georgia,serif;color:#2a2622;background:#d8d2c4}
+.note{color:#1f5fa8}.zone{border-color:#9a948a;color:#6e685e}
+.wrap{max-width:1320px;margin:0 auto;padding:32px 48px 56px;display:flex;flex-direction:column;gap:20px}
+.nb .page.left.cover{background:#e9e2d0;background-image:radial-gradient(rgba(0,0,0,.035) 1px,transparent 1px);background-size:6px 6px}
+.sticker{background:#fff;border:1.5px solid #2a2622;box-shadow:2px 3px 0 #b8b2a4;padding:18px 22px;transform:rotate(-1.5deg);display:flex;flex-direction:column;gap:8px;position:relative}
+.sticker::before{content:"";position:absolute;top:-12px;left:40%;width:90px;height:22px;background:rgba(255,230,120,.75);transform:rotate(-3deg)}
+.sticker h1{font-size:34px;line-height:1.1}
+.field{display:flex;gap:10px;align-items:baseline;font-family:'Architects Daughter',cursive;font-size:19px}
+.field u{text-decoration:none;border-bottom:2px solid #2a2622;min-width:120px;display:inline-block;color:#1f5fa8}
+.polaroid{background:#fff;padding:10px 10px 36px;box-shadow:2px 3px 0 #b8b2a4;display:flex;flex-direction:column;gap:8px;position:relative;width:170px;flex:none}
+.polaroid .cap{font-family:'Architects Daughter',cursive;font-size:19px;position:absolute;bottom:6px;left:12px}
+.entry{display:flex;gap:20px;align-items:flex-start;padding:14px 0;border-bottom:1px dashed #b8b2a4}
+.entry .num{width:34px;height:34px;border:2.5px solid #2a2622;border-radius:50% 46% 50% 48%;display:flex;align-items:center;justify-content:center;font-family:'Architects Daughter',cursive;font-size:21px;background:#fff;transform:rotate(-3deg);flex:none}
+.entry h2{font-size:26px}
+.entry p{margin:4px 0 8px;font-size:16px;line-height:1.5}
+.entry.star{background:rgba(255,243,176,.35);border-left:3px solid #1f5fa8;padding-left:12px;margin-left:-15px}
+.mini .cell{font-size:0;border-radius:2px}
+.contents{font-family:'Architects Daughter',cursive;font-size:19px;display:flex;flex-direction:column;gap:2px;margin-top:14px}
+.contents div{display:flex;gap:8px;align-items:baseline}
+.contents .dots{flex:1;border-bottom:2px dotted #9a948a;transform:translateY(-6px)}
+.attrib{font-size:13px;color:#6e685e;margin-top:24px}
+
+
+body{margin:0;font-family:'Source Serif 4',Georgia,serif;color:#2a2622;background:#d8d2c4}
+.note{color:#1f5fa8}.zone{border-color:#9a948a;color:#6e685e}
+.wrap{max-width:1320px;margin:0 auto;padding:32px 48px 56px;display:flex;flex-direction:column;gap:20px}
+.fig{display:flex;flex-direction:column;gap:10px}
+.outcomes{display:grid;grid-template-columns:repeat(8,1fr);gap:3px;width:min(100%,260px)}
+.outcomes i{display:block;aspect-ratio:1/1;border:1px solid #2a2622;border-radius:2px;background:#fff}
+.heat{border:1px solid #2a2622;box-shadow:3px 3px 0 #b8b2a4;transform:rotate(-.8deg);background:#fff;image-rendering:pixelated;width:min(100%,260px);height:auto}
+.running{display:none;font-family:'Caveat',cursive;font-size:22px;color:#b03934}
+.busy .running{display:inline}
+.circuit{width:100%;max-width:420px;height:auto;background:#fff;border:1px solid #2a2622;box-shadow:3px 3px 0 #b8b2a4;transform:rotate(.5deg)}
+pre.qasm{font:13px/1.4 ui-monospace,Menlo,monospace;background:#fff;border:1px solid #2a2622;padding:8px;margin:6px 0 0;max-height:140px;overflow:auto}
+
+
+body{margin:0;font-family:'Source Serif 4',Georgia,serif;color:#2a2622;background:#d8d2c4}
+.note{color:#1f5fa8}.zone{border-color:#9a948a;color:#6e685e}
+.wrap{max-width:1320px;margin:0 auto;padding:32px 48px 56px;display:flex;flex-direction:column;gap:20px}
+.fig{display:flex;flex-direction:column;gap:10px}
+.rng{display:grid;grid-template-columns:150px minmax(0,1fr) auto;gap:10px;align-items:center;font-family:'Architects Daughter',cursive;font-size:17px}
+.rng .lbl{display:flex;align-items:center;gap:6px}
+.rng .bar{position:relative;height:14px;border:1.5px solid #2a2622;border-radius:7px;background:#fff}
+.rng .bar i{position:absolute;top:1px;bottom:1px;background:#1f5fa8;border-radius:6px;opacity:.75}
+.rng .ends{display:flex;align-items:baseline;gap:4px;white-space:nowrap}
+.rng input[type=number]{width:58px}
+.q{width:20px;height:20px;border:1.5px solid #2a2622;border-radius:50%;background:#fff;font-size:13px;padding:0;display:inline-flex;align-items:center;justify-content:center;flex:none;font-family:'Architects Daughter',cursive}
+.rhint{grid-column:1/-1;margin:-4px 0 4px 0}
+.cat{width:12px;height:12px;border-radius:50%;display:inline-block;flex:none;border:1px solid #2a2622}
+.cat.c0{background:#1f5fa8}.cat.c1{background:#5c9a44}.cat.c2{background:#e0b020}
+.nb .cell{flex-direction:column;gap:1px;line-height:1;position:relative;transition:background .2s}
+.nb .cell small{font-size:9px;font-weight:400}
+.nb .cell.edited::after{content:"";position:absolute;top:2px;right:2px;width:7px;height:7px;border-radius:50%;background:#e0b020;border:1px solid #2a2622}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#e0b020;border:1px solid #2a2622;vertical-align:middle}
+.insp{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px 14px;font-family:'Architects Daughter',cursive;font-size:16px}
+.insp label{display:flex;flex-direction:column;gap:2px}
+.insp label.edited{color:#b07a00}
+.insp input[type=number],.insp select{width:100%;box-sizing:border-box;text-align:left;font-size:16px}
+.nowcard{background:#fff;border:1.5px solid #2a2622;box-shadow:2px 3px 0 #b8b2a4;padding:8px 14px;transform:rotate(-.6deg);display:flex;flex-direction:column;gap:2px;font-family:'Architects Daughter',cursive;font-size:16px;align-self:flex-start}
+.nowcard b{font-size:20px;font-weight:400}
+.chart{width:100%;max-width:420px;height:auto;background:#fff;border:1px solid #2a2622;box-shadow:3px 3px 0 #b8b2a4;transform:rotate(-.5deg)}
+
+
+body{margin:0;font-family:'Source Serif 4',Georgia,serif;color:#2a2622;background:#d8d2c4}
+.note{color:#1f5fa8}.zone{border-color:#9a948a;color:#6e685e}
+.wrap{max-width:1320px;margin:0 auto;padding:32px 48px 56px;display:flex;flex-direction:column;gap:20px}
+.fig{display:flex;flex-direction:column;gap:10px}
+.readout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:14px;align-items:start}
+.readout .nowcard{background:#fff;border:1.5px solid #2a2622;box-shadow:2px 3px 0 #b8b2a4;padding:10px 14px;transform:rotate(-.6deg);display:flex;flex-direction:column;gap:4px;font-family:'Architects Daughter',cursive;font-size:17px}
+.readout .nowcard b{font-size:21px;font-weight:400}
+.readout .nowcard small{color:#6e685e;font-size:14px}
+.readout .ringing{font-family:'Architects Daughter',cursive;font-size:16px;display:flex;flex-direction:column;gap:2px;padding-top:4px}
+.readout .ringing span{color:#6e685e;border-bottom:1px solid #cfe0f0;margin-bottom:4px}
+.readout .ringing i{font-style:normal;display:flex;justify-content:space-between;gap:8px;border-bottom:1px dashed #cfe0f0}
+@media(max-width:600px){.readout{grid-template-columns:1fr}}
+
+
+body{margin:0;font-family:'Source Serif 4',Georgia,serif;color:#2a2622;background:#d8d2c4}
+.note{color:#1f5fa8}.zone{border-color:#9a948a;color:#6e685e}
+.wrap{max-width:1100px;margin:0 auto;padding:32px 48px 56px;display:flex;flex-direction:column;gap:20px}
+.nb .page{padding:36px 48px 48px}
+.sec{display:flex;flex-direction:column;gap:8px;padding:14px 0;border-bottom:1px dashed #b8b2a4}
+.sec p{margin:0;font-size:17px;line-height:1.6;max-width:760px}
+pre.qasm{font:13px/1.4 ui-monospace,Menlo,monospace;background:#fff;border:1px solid #2a2622;padding:10px;margin:0;max-width:720px;overflow:auto}
+dl{display:grid;grid-template-columns:max-content 1fr;gap:4px 16px;margin:0;font-family:'Architects Daughter',cursive;font-size:17px}
+dt{color:#6e685e}dd{margin:0}
+
+/* Production layout and accessibility overrides. */
+*{box-sizing:border-box}body{font-family:'Architects Daughter',cursive;margin:0;background:#d8d2c4;color:#2a2622}.notebook-shell{max-width:1360px;margin:auto;padding:32px 28px 56px}.nb{font-size:18px}.nb p{line-height:1.6}.nb .tabs{flex-wrap:wrap;padding-left:16px}.nb button{cursor:pointer}.nb :focus-visible{outline:3px solid #b03934;outline-offset:3px}.nb .tab{min-height:44px}.nb .grid{display:grid;grid-template-columns:repeat(var(--side,8),minmax(0,1fr));gap:4px;position:relative}.nb .map{position:relative;max-width:100%;aspect-ratio:1}.nb .map svg{position:absolute;inset:12px;width:calc(100% - 24px);height:calc(100% - 24px);pointer-events:none}.nb .map .grid{width:100%;height:100%}.nb .cell{display:flex;align-items:center;justify-content:center;min-width:0;aspect-ratio:1;padding:0;flex-direction:column;font-size:13px}.nb .map.mini{width:150px}.nb .mini .cell{font-size:0}.nb .step.locked{opacity:.58}.nb .step .head h2{font-size:25px}.nb .handbtn{white-space:normal}.nb .status{padding:12px;min-height:24px;color:#b03934}.nb .file-input{display:block;max-width:100%;font:16px 'Architects Daughter',cursive}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}.nb .nowcard{transform:none}.nb .readout{display:grid;grid-template-columns:1.4fr 1fr;gap:14px}.nb .ringing i{display:flex;justify-content:space-between;font-style:normal}.nb .entry .polaroid{max-width:34%}.nb .rng{grid-template-columns:145px minmax(0,1fr) auto}.nb .rng .ends{flex-wrap:wrap}.nb .rng input[type=number]{width:62px}.nb .onion{pointer-events:none}.nb .running{display:none}.nb.busy .running{display:inline}.nb .zone{background:repeating-linear-gradient(45deg,#fff,#fff 9px,#f0eadd 10px);border:1px dashed #6e685e}.nb .chart{display:block}.nb .sec{margin:24px 0}.nb dl{display:grid;grid-template-columns:140px minmax(0,1fr);gap:8px 16px}.nb dd{margin:0;overflow-wrap:anywhere}.nb pre{white-space:pre-wrap;overflow-wrap:anywhere;max-width:100%;font:13px/1.5 monospace}.nb .single .page{max-width:940px;margin:auto}.nb [hidden]{display:none!important}
+@media(max-width:700px){.notebook-shell{padding:24px 16px}.nb .spread{display:flex;flex-direction:column}.nb .spine{display:none}.nb .page.left,.nb .page.right{padding:24px 16px;border:1px solid #b8b2a4}.nb .tabs{padding:0;gap:3px}.nb .tab{padding:8px;font-size:16px}.nb .entry{gap:10px;flex-wrap:wrap}.nb .entry .polaroid{display:none}.nb .row{grid-template-columns:80px minmax(0,1fr) auto;gap:6px}.nb .row label{overflow-wrap:anywhere}.nb .rng{grid-template-columns:1fr auto}.nb .rng .bar{display:none}.nb .rng .lbl{font-size:16px}.nb .readout{grid-template-columns:1fr}.nb .seg{flex-wrap:wrap}.nb .seg label{font-size:16px;padding:8px}.nb .step{padding:10px 4px}.nb .step .head{gap:8px}.nb .step .head h2{font-size:22px}.nb dl{grid-template-columns:85px 1fr}.nb .page.left.cover .polaroid{width:100%!important;max-width:260px}.nb .cell small{font-size:8px}.nb .map-paper{transform:none;padding:8px}.nb .map svg{inset:8px;width:calc(100% - 16px);height:calc(100% - 16px)}.nb .sticker{padding:16px}.nb .sticker h1{font-size:28px}.nb .stamp{letter-spacing:1px;font-size:15px}}
+@media(prefers-reduced-motion:reduce){.nb *{transition:none!important;animation:none!important}}
+
+.nb .map svg{z-index:2}.nb .probability-scroll{max-width:100%;max-height:240px;overflow:auto}.nb .odds-table table{border-collapse:collapse;font-size:14px}.nb .odds-table td,.nb .odds-table th{padding:4px;border:1px solid #cfe0f0}.nb .cover{background-color:#efe9da}
+.nb label.handbtn:has(input[type=file]){display:flex!important;flex-direction:column;align-items:flex-start!important;max-width:100%;min-width:0;padding:8px 12px;gap:6px}.nb input[type=file]{width:100%;min-width:0;max-width:100%}.nb .q{width:24px;height:24px}

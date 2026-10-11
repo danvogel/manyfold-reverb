@@ -1,0 +1,8 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Recorded 16-room bridge fixture · no quantum job</title><link rel="stylesheet" href="main.css"><div id="app"></div>
+<script>
+Promise.all(['reference16.json','manyspace-core.js'].map(p=>fetch(p).then(r=>p.endsWith('.json')?r.json():r.text()))).then(([reference,core])=>{
+ window.ManyspaceReference=reference;window.ManyspaceCoreText=core;
+ window.ManyspaceNotebookTestOptions={reference,backend:{fixture:true},workflow:{generate_on_backend:{callPromising:async(_backend,count)=>{if(count!==16)throw Error('This recorded bridge fixture has 16 rooms; no quantum job runs.');return reference;}}}};
+ const s=document.createElement('script');s.src='app.js';document.body.append(s);
+});
+</script></html>

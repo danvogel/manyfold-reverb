@@ -1,0 +1,78 @@
+{
+  "format": "manyspace.art-selection",
+  "version": 1,
+  "proposals": [
+    {
+      "id": "K1",
+      "asset": "kitty-1",
+      "page": "cover",
+      "target": ".page.left",
+      "placement": "footer",
+      "width": 160,
+      "rotation": -5,
+      "color": "original",
+      "title": "Cover margin companion",
+      "why": "Sits in the spare lower cover margin, like a doodle added after writing the welcome card."
+    },
+    {
+      "id": "C3",
+      "asset": "cat-1",
+      "page": "play",
+      "target": "[data-step=\"7\"]",
+      "placement": "footer",
+      "width": 120,
+      "rotation": 5,
+      "color": "blue",
+      "title": "A signed-off take",
+      "why": "The cat signs the recording/log area as a blue ballpoint doodle, after the controls."
+    },
+    {
+      "id": "D1",
+      "asset": "doodle",
+      "page": "generate",
+      "target": "h1",
+      "placement": "beside",
+      "width": 95,
+      "rotation": -8,
+      "color": "blue",
+      "title": "Energy beside the procedure",
+      "why": "The lightning, swirl and star add a bright note to the Generate heading."
+    },
+    {
+      "id": "W1",
+      "asset": "doodle-warm",
+      "page": "shape",
+      "target": "h1",
+      "placement": "beside",
+      "width": 105,
+      "rotation": 6,
+      "color": "original",
+      "title": "Warm Shape heading",
+      "why": "The warm-colored cluster feels like a marker doodle in the page\u2019s upper margin."
+    },
+    {
+      "id": "W5",
+      "asset": "doodle-warm",
+      "page": "appendix",
+      "target": "@section:2",
+      "placement": "beside",
+      "width": 110,
+      "rotation": -5,
+      "color": "blue",
+      "title": "One-pen room-character note",
+      "why": "A single blue ink treatment ties the same shapes to the room-character explanation."
+    },
+    {
+      "id": "I5",
+      "asset": "doodle-winter",
+      "page": "appendix",
+      "target": "@section:4",
+      "placement": "footer",
+      "width": 115,
+      "rotation": 4,
+      "color": "graphite",
+      "title": "Credits-page closing flourish",
+      "why": "The grey pencil treatment sits below the credits, like a final margin doodle."
+    }
+  ]
+}
