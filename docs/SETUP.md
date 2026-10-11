@@ -1,6 +1,6 @@
 # Developer setup for the minimal Manyfold repository
 
-README.md is preserved for Dan/dot's public submission copy review. Its early slice description contains stale facts; current setup lives here and corrections live in README-REVIEW.md.
+README.md is preserved for Dan/dot's public submission copy review. Setup for this minimal export lives here; host-specific corrections are recorded in README-REVIEW.md.
 
 This repository contains the notebook presenter, Python/Qiskit generation and validation, portable C++ audio core, relevant regression tests, fonts/art derivatives and a source-checked precompiled browser core. Native Studio, proposals, screenshots, high-resolution art originals, prototype history and build outputs remain in the authoring workspace.
 

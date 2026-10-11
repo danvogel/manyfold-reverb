@@ -87,10 +87,12 @@ Minimal repository preparation (October 11): Dan created the public MIT reposito
 `https://github.com/danvogel/manyfold-reverb` and authorized preparing it for this
 project. A source-only notebook/core export is prepared separately under
 `build/public-repo/manyfold-reverb`; its tests and builds were run independently.
-README is still preserved verbatim and contains early-slice facts that need Dan/dot
-review before submission: the interactive notebook and WASM adapter now exist,
-local/hosted probe support is verified, rich room character and stereo are implemented,
-and the public repository exists. Native Studio is outside the minimal export, so
-its developer commands belong to the authoring repository's docs. The minimal
-repository's verified commands are in `docs/SETUP.md`. Source upload/push and the
-full hosted notebook result must be recorded separately once actually completed.
+The latest user-authored Manyfold README is preserved verbatim (SHA-256
+`c36ce7c469b9ee445b2134a6584911ccb2bf3155f42949c47af992bdc6e5a280`).
+For Dan/dot's review of this minimal distribution: `make test-wasm` uses the
+source-checked supplied browser core; explicit recompilation is `make wasm`.
+`make studio` is intentionally outside this export and remains an authoring-repo
+command. Font licenses are in `web/fonts/`; Emscripten's notice is in
+`web/licenses/emscripten-LICENSE.txt`. Qollab project/video placeholders still need
+actual public URLs. Verified developer setup lives in `docs/SETUP.md`. Source push
+and full hosted notebook results must be recorded once actually completed.

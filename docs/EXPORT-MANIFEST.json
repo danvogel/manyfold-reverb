@@ -167,13 +167,13 @@
     },
     {
       "path": "docs/README-REVIEW.md",
-      "bytes": 6448,
-      "sha256": "abb968a57c12ccdc1ee1b636d8aeba2815bff564d051cfa3bff1adc07c278e7b"
+      "bytes": 6562,
+      "sha256": "37ba655effb201dbd1d5f3ac5620f15af827898a5213ae92da851a196665efaf"
     },
     {
       "path": "docs/SETUP.md",
-      "bytes": 3443,
-      "sha256": "ad331f88a5fa7bfd04f719c598f1a89737e335aed8201c65b82b319d15e38e62"
+      "bytes": 3428,
+      "sha256": "acef5ccc91716b28ce8514ccde8354c3e544326d487002c5d40afe703fda0e32"
     },
     {
       "path": "manyspace/__init__.py",
@@ -404,6 +404,16 @@
       "path": "docs/MINIMAL-REPOSITORY.md",
       "bytes": 2338,
       "sha256": "9099dc156494ab66ea319afc01decf830ea7ac4791b637767074fb02efe65ef1"
+    },
+    {
+      "path": "docs/EVIDENCE.md",
+      "bytes": 26082,
+      "sha256": "75d015376edeab8dacf2f69c2d0d25d5eb0f0dada9dbb75e14d248f058b33b35"
+    },
+    {
+      "path": "docs/QUANTUM.md",
+      "bytes": 4003,
+      "sha256": "62e193a28e0d13235acbabcc8e42ff14525ff5c7a5b2ed73f291104eb0a85996"
     }
   ],
   "readme_preserved": true
